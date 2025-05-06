@@ -1,11 +1,10 @@
 # HashGuard
 
-A lightweight, version-controlled file integrity checker for Linux.
+A lightweight file integrity checker for Linux.
 
 ## Features
 
 - SHA-256 hashing of all files in a target directory
-- Git version control of hash records
 - Simple CLI interface
 
 ## Usage
@@ -14,8 +13,6 @@ A lightweight, version-controlled file integrity checker for Linux.
 ./hashguard.sh init
 ./hashguard.sh generate /path/to/target
 ./hashguard.sh verify
-./hashguard.sh history
-./hashguard.sh diff
 ```
 
 ## Installation
