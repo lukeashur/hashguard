@@ -1,6 +1,6 @@
 # HashGuard
 
-A lightweight file integrity checker for Linux.
+A lightweight sha256 file integrity checker for Linux.
 
 ## Features
 
