@@ -7,6 +7,7 @@ A lightweight file integrity checker for Linux.
 - SHA-256 hashing of all files in a target directory
 - Support for importing and verifying third-party hashes
 - Permission-controlled hash file for tamper resistance
+- Enforces secure hash file permissions
 - Simple CLI interface
 
 ## Usage
@@ -19,8 +20,8 @@ Generate hashes
 ```bash
 ./hashguard.sh generate /path/to/target
 ```
-```bash
 Generate with third-party hashes
+```bash
 ./generate_hashes.sh /path/to/target /var/hashes /path/to/thirdparty/hashes.txt
 ```
 Verify
