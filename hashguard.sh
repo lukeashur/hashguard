@@ -10,7 +10,6 @@ case "$COMMAND" in
             echo "Failed to create directory: $HASH_FILE_DIR"
             exit 1
         fi
-
         echo "Initialized hashguard directory at $HASH_FILE_DIR."
         ;;
     generate)
