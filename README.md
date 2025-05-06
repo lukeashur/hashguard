@@ -16,6 +16,10 @@ Initialize secure hash directory:
 ```bash
 ./hashguard.sh init
 ```
+Create system-wide link:
+```bash
+./hashguard.sh link
+```
 Generate hashes:
 ```bash
 ./hashguard.sh generate /path/to/target
