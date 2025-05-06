@@ -4,7 +4,7 @@ A lightweight SHA-256 file integrity checker for Linux & macOS.
 
 ## Installation
 
-Initialize secure hash directory:
+Initialize hash directory:
 ```bash
 ./hashguard.sh init
 ```
@@ -20,7 +20,7 @@ chmod +x /path/to/hashguard/hashguard.sh
 ## Features
 
 - SHA-256 hashing of all files in a target directory
-- Uses secure permission-controlled hash file for tamper resistance
+- Secure, permission-controlled hash file for tamper resistance
 - Simple CLI interface
 
 ## Usage
