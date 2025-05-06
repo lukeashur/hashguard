@@ -1,26 +1,23 @@
 #!/bin/bash
 
-TARGET_DIR="$1"
+TARGET="$1"
 HASH_FILE_DIR="./hashes"
-IMPORT_HASH_FILE="$2"
 HASH_FILE="$HASH_FILE_DIR/hashes.sha256"
 
-# Validate target directory
-if [[ -z "$TARGET_DIR" || ! -d "$TARGET_DIR" ]]; then
-    echo "Error: Please provide a valid target directory."
-    echo "Usage: ./generate_hashes.sh <target_dir> [thirdparty_hash_file]"
+# Validate target input (file or directory)
+if [[ -z "$TARGET" || ( ! -d "$TARGET" && ! -f "$TARGET" ) ]]; then
+    echo "Error: Please provide a valid target directory or file."
+    echo "Usage: ./generate_hashes.sh <target_dir_or_file>"
     exit 1
 fi
 
 mkdir -p "$HASH_FILE_DIR"
 
 # Generate hashes
-find "$TARGET_DIR" -type f -exec sha256sum {} \; > "$HASH_FILE"
-
-# Import third-party hashes
-if [[ -n "$IMPORT_HASH_FILE" && -f "$IMPORT_HASH_FILE" ]]; then
-    echo "Importing third-party hashes from: $IMPORT_HASH_FILE"
-    cat "$IMPORT_HASH_FILE" >> "$HASH_FILE"
+if [[ -d "$TARGET" ]]; then
+    find "$TARGET" -type f -exec sha256sum {} \; > "$HASH_FILE"
+elif [[ -f "$TARGET" ]]; then
+    sha256sum "$TARGET" > "$HASH_FILE"
 fi
 
 # Secure hash file

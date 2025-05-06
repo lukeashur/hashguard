@@ -20,13 +20,9 @@ Create system-wide link:
 ```bash
 ./hashguard.sh link
 ```
-Generate hashes:
+Generate SHA-256 hashes for a file or directory:
 ```bash
 ./hashguard.sh generate /path/to/target
-```
-Generate with third-party hashes:
-```bash
-./generate_hashes.sh /path/to/target /var/hashes /path/to/thirdparty/hashes.txt
 ```
 Verify hashes:
 ```bash
