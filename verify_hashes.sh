@@ -10,7 +10,6 @@ fi
 
 cd "$HASH_FILE_DIR" || exit 1
 
-# Run verification
 if sha256sum -c hashes.sha256; then
     echo "All files verified successfully."
 else
