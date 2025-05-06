@@ -8,7 +8,7 @@ Initialize hash directory:
 ```bash
 ./hashguard.sh init
 ```
-Create a symlink for easy use:
+Create symlink for easy use:
 ```bash
 ./hashguard.sh link
 ```
