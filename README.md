@@ -2,6 +2,21 @@
 
 A lightweight SHA-256 integrity checker for Linux.
 
+## Installation
+
+Initialize secure hash directory:
+```bash
+./hashguard.sh init
+```
+Create a symbolic link for easy use:
+```bash
+./hashguard.sh link
+```
+Make the script executable:
+```bash
+chmod +x /path/to/hashguard/hashguard.sh
+```
+
 ## Features
 
 - SHA-256 hashing of all files in a target directory
@@ -18,19 +33,3 @@ Verify hashes:
 ```bash
 ./hashguard.sh verify
 ```
-
-## Installation
-
-Initialize secure hash directory:
-```bash
-./hashguard.sh init
-```
-Create a symbolic link for easy use:
-```bash
-./hashguard.sh link
-```
-Make the script executable:
-```bash
-chmod +x /path/to/hashguard/hashguard.sh
-```
-
