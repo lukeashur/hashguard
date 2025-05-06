@@ -12,14 +12,6 @@ A lightweight file integrity checker for Linux.
 
 ## Usage
 
-Initialize secure hash directory:
-```bash
-./hashguard.sh init
-```
-Create system-wide link:
-```bash
-./hashguard.sh link
-```
 Generate SHA-256 hashes for a file or directory:
 ```bash
 ./hashguard.sh generate /path/to/target
@@ -30,9 +22,14 @@ Verify hashes:
 ```
 
 ## Installation
+
+Initialize secure hash directory:
+```bash
+./hashguard.sh init
+```
 Create a symbolic link for easy use:
 ```bash
-sudo ln -s /path/to/hashguard/hashguard.sh /usr/local/bin/hashguard
+./hashguard.sh link
 ```
 Make the script executable:
 ```bash
