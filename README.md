@@ -11,11 +11,20 @@ A lightweight file integrity checker for Linux.
 
 ## Usage
 
-### Generate Hashes
-
+Initialize secure hash directory
 ```bash
 ./hashguard.sh init
+```
+Generate hashes
+```bash
 ./hashguard.sh generate /path/to/target
+```
+```bash
+Generate with third-party hashes
+./generate_hashes.sh /path/to/target /var/hashes /path/to/thirdparty/hashes.txt
+```
+Verify
+```bash
 ./hashguard.sh verify
 ```
 
