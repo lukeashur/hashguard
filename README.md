@@ -1,6 +1,6 @@
 # HashGuard
 
-A lightweight SHA-256 integrity checker for Linux.
+A lightweight SHA-256 integrity checker for Linux & macOS.
 
 ## Installation
 
