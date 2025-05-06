@@ -2,7 +2,7 @@
 
 COMMAND="$1"
 TARGET_DIR="$2"
-HASH_FILE_DIR="/var/hashes" 
+HASH_FILE_DIR="./hashes"
 
 case "$COMMAND" in
     init)
