@@ -5,7 +5,7 @@ A lightweight SHA-256 integrity checker for Linux.
 ## Features
 
 - SHA-256 hashing of all files in a target directory
-- Permission-controlled hash file for tamper resistance
+- Uses permission-controlled hash file for tamper resistance
 - Enforces secure hash file permissions
 - Simple CLI interface
 
