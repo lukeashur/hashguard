@@ -21,5 +21,5 @@ A lightweight, version-controlled file integrity checker for Linux.
 ## Installation
 
 ```bash
-sudo ln -s /path/to/hashguard/hashguard.sh /var/hashguard
+sudo ln -s /path/to/hashguard/hashguard.sh /usr/local/bin/hashguard
 ```
