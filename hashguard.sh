@@ -2,13 +2,14 @@
 
 COMMAND="$1"
 TARGET_DIR="$2"
-HASH_FILE_DIR="./hashes"
+HASH_FILE_DIR="/var/hashes" 
 
 case "$COMMAND" in
     init)
-        mkdir -p "$HASH_FILE_DIR"
-        cd "$HASH_FILE_DIR" && git init && cd ..
-        echo "Initialized hashguard repository."
+        sudo mkdir -p "$HASH_FILE_DIR"
+        sudo chown "$(whoami):$(whoami)" "$HASH_FILE_DIR"
+        sudo chmod 700 "$HASH_FILE_DIR"
+        echo "Initialized hashguard directory at $HASH_FILE_DIR."
         ;;
     generate)
         ./generate_hashes.sh "$TARGET_DIR" "$HASH_FILE_DIR"
@@ -16,13 +17,7 @@ case "$COMMAND" in
     verify)
         ./verify_hashes.sh "$HASH_FILE_DIR"
         ;;
-    history)
-        cd "$HASH_FILE_DIR" && git log --oneline
-        ;;
-    diff)
-        cd "$HASH_FILE_DIR" && git diff HEAD~1 HEAD -- hashes.sha256
-        ;;
     *)
-        echo "Usage: hashguard.sh {init|generate <dir>|verify|history|diff}"
+        echo "Usage: hashguard.sh {init|generate <dir>|verify}"
         ;;
 esac
