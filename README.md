@@ -10,7 +10,7 @@ A lightweight SHA-256 integrity checker for Linux.
 
 ## Usage
 
-Generate SHA-256 hashes for a file or directory:
+Generate SHA-256 hash for a file or directory:
 ```bash
 ./hashguard.sh generate /path/to/target
 ```
